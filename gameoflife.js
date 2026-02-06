@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const h1Element = document.querySelector('h1');
+    const text = h1Element.textContent;
+    h1Element.innerHTML = ''; // Clear existing text
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        span.textContent = text[i];
+        span.style.color = getRandomColor();
+        h1Element.appendChild(span);
+    }
+
     const canvas = document.getElementById('gameCanvas');
     const ctx = canvas.getContext('2d');
 
