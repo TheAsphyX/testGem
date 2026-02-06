@@ -3,7 +3,6 @@ body {
     background-color: #f0f0f0;
     text-align: center;
     margin: 0;
-    padding: 20px;
 }
 
 h1 {
@@ -49,4 +48,70 @@ h1 {
     background-color: #fff;
     border: 2px solid #333;
     cursor: pointer;
+}
+
+/* Stili dell'intestazione ispirati a vigilfuoco.it */
+.vf-header {
+    background-color: #A72920; /* RAL300 Rosso Fiamma */
+    color: #ffffff;
+    padding: 15px 0; /* Padding verticale iniziale */
+    border-bottom: 5px solid #ffffff; /* Bordo bianco per contrasto */
+    margin-bottom: 20px;
+    transition: padding 0.3s ease; /* Transizione fluida per i cambiamenti di padding */
+}
+
+.vf-header:hover {
+    padding: 45px 0; /* Padding verticale espanso al passaggio del mouse */
+}
+
+.vf-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.vf-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.vf-logo img {
+    height: 50px; /* Adatta secondo necessità */
+    margin-right: 10px;
+}
+
+.vf-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.vf-nav ul li {
+    margin-left: 20px;
+}
+
+.vf-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.vf-nav ul li a:hover {
+    color: #f0f0f0;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Regola il padding del body per tenere conto dell'intestazione fissa se necessario */
+body {
+    padding-top: 0; /* Reset se c'era un padding che influenzava l'intestazione */
 }
